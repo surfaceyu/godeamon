@@ -4,11 +4,10 @@ import (
 	"log"
 	"net/http"
 
-	_ "github.com/surfaceyu/godaemon"
+	_ "github.com/surfaceyu/godeamon"
 )
 
 func main() {
-
 	mux := http.NewServeMux()
 	mux.HandleFunc("/index", func(rw http.ResponseWriter, req *http.Request) {
 		rw.Write([]byte("hello, golang!\n"))
